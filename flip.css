@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    font-family:'montserrat',sans-serif;
+}
+html{
+    display:block;
+}
+.header{
+    font-size:40px;
+    color:rgb(235, 232, 232);
+    position:absolute;
+    text-align:center;
+    margin:50px;
+    margin-left:0;
+    margin-right:0;
+    top:0;
+    padding:20px;
+    
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+.header1{
+    font-size:30px;
+    color:white;
+    margin:50px;
+    margin-left:0;
+    margin-right:0;
+    text-align:center;
+    padding:20px;
+    
+}
+
+body{
+    
+    display:flex;
+    flex-wrap:wrap;
+    min-height:100vh;
+    margin-top:150px;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+   background-color: #141114;
+  background-image: linear-gradient(335deg, black 23px, transparent 23px),
+    linear-gradient(155deg, black 23px, transparent 23px),
+    linear-gradient(335deg, black 23px, transparent 23px),
+    linear-gradient(155deg, black 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+
+.card{
+    background: black;
+    display:flex;
+    cursor:pointer;
+    width:221px;
+    height:130px;
+    position:relative;
+    margin:30px;
+    padding:10px;
+    box-sizing:border-box;
+    justify-content:center;
+    align-items:center;
+    border:2px solid white;
+    border-radius: 10px;
+}
+.d1,.d2,.d3{
+    border-bottom: 2px solid white;
+}
+.card1{
+    display:flex;
+    cursor:pointer;
+    width:221px;
+    height:130px;
+    position:relative;
+    margin:30px;
+    padding:10px;
+    box-sizing:border-box;
+    justify-content:center;
+    align-items:center;
+}
+.front,.back{
+    display:flex;
+   width: 207.77px;
+   height:116.87px;
+overflow:hidden;
+backface-visibility:hidden;
+position: absolute;
+transition:transform .6s linear;
+justify-content:center;
+    align-items:center;
+    border-radius: 10px;
+
+}
+.details{
+    text-align: center;
+    
+}
+.front img{
+    height:100%;
+}
+.front{
+    transform:perspective(600px) rotateY(0deg);
+}
+.back{
+    background: #f1f1f1;
+    transform:perspective(600px) rotateY(180deg);
+}
+.back-content{
+    display:flex;
+    color: #2c3e50;
+    text-align: center;
+    width:100%;
+    justify-content: center;
+}
+.icons{
+    margin:20px 0;
+}
+.icons a{
+    display:inline-flex;
+    width:40px;
+    height:40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition:0.4s;
+    border-radius:50%;
+    text-align:center;
+    
+}
+.icons a:hover{
+background:#2c3e50;
+color:white;
+}
+.card:hover > .front{
+    transform:perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform:perspective(600px) rotateY(0deg);
+    }
